@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html ng-app="HRMSApp">
+<head>
+    <meta charset="utf-8">
+    <title>Edsel - Human Resource App</title>
+    <link href="css/animation.css" rel="stylesheet" />
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+    <script src="javascripts/module.js"></script>
+    <script src="javascripts/controller.js"></script>
+    <script src="javascripts/view.js"></script>
+</head>
+<body ng-controller="mainController">
+
+    <!-- HEADER AND NAVBAR -->
+    <header style="border:1px solid black;">
+        <nav>
+            <div id="headerContainer">
+                <a href="#home">Home</a>&nbsp;|&nbsp;
+                <a href="#about">About</a>&nbsp;|&nbsp;
+                <a href="#contact">Contact</a>
+                <select id="animationclasses" ng-model="AnimationClass">
+                    <option value="" selected></option>
+                    <option value="slide">Slide</option>
+                    <option value="fade">Fade</option>
+                    <option value="pop">Pop</option>
+                    <option value="rotate">Rotate</option>
+                    <option value="flip">Flip</option>
+                    <option value="slide-pop">Slide/Pop</option>
+                    <option value="slidedown">Slide Down</option>
+                    <option value="slideup">Slide Up</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div="mainContainer">
+
+        <div id="viewContainer" ng-view ng-class="AnimationClass"  style="background-color:greenyellow;width:400px; height:200px; position:absolute;"></div>
+
+    </div>
+    
+</body>
+</html>
